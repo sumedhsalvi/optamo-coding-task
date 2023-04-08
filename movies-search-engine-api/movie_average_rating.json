@@ -1,0 +1,38 @@
+{
+    "In the Mood For Love (Fa yeung nin wa)": {
+        "genre": [
+            "Drama",
+            "Romance"
+        ],
+        "year": 2000,
+        "average_rating": 4.04
+    },
+    "Lord of the Rings: The Two Towers, The": {
+        "genre": [
+            "Adventure",
+            "Fantasy"
+        ],
+        "year": 2002,
+        "average_rating": 4.07
+    },
+    "City of God (Cidade de Deus)": {
+        "genre": [
+            "Action",
+            "Adventure",
+            "Crime",
+            "Drama",
+            "Thriller"
+        ],
+        "year": 2002,
+        "average_rating": 4.18
+    },
+    "Eternal Sunshine of the Spotless Mind": {
+        "genre": [
+            "Drama",
+            "Romance",
+            "Sci-Fi"
+        ],
+        "year": 2004,
+        "average_rating": 4.07
+    }
+}
