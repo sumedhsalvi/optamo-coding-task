@@ -7,27 +7,27 @@
   <table mat-table [dataSource]="dataSource" matSort>
 
     <!-- Name Column -->
-    <ng-container matColumnDef="id">
-      <th mat-header-cell *matHeaderCellDef mat-sort-header> Name </th>
-      <td mat-cell *matCellDef="let row"> {{row.id}} </td>
-    </ng-container>
-
-    <!-- Year of release Column -->
-    <ng-container matColumnDef="progress">
-      <th mat-header-cell *matHeaderCellDef mat-sort-header> Year of release </th>
-      <td mat-cell *matCellDef="let row"> {{row.progress}}% </td>
-    </ng-container>
-
-    <!-- Genres Column -->
     <ng-container matColumnDef="name">
-      <th mat-header-cell *matHeaderCellDef mat-sort-header> Genres </th>
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Name </th>
       <td mat-cell *matCellDef="let row"> {{row.name}} </td>
     </ng-container>
 
+    <!-- Year of release Column -->
+    <ng-container matColumnDef="YOR">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Year of release </th>
+      <td mat-cell *matCellDef="let row"> {{row.YOR}} </td>
+    </ng-container>
+
+    <!-- Genres Column -->
+    <ng-container matColumnDef="genres">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Genres </th>
+      <td mat-cell *matCellDef="let row"> {{row.genres}} </td>
+    </ng-container>
+
     <!-- Average rating Column -->
-    <ng-container matColumnDef="fruit">
+    <ng-container matColumnDef="avgRating">
       <th mat-header-cell *matHeaderCellDef mat-sort-header> Average rating </th>
-      <td mat-cell *matCellDef="let row"> {{row.fruit}} </td>
+      <td mat-cell *matCellDef="let row"> {{row.avgRating}} </td>
     </ng-container>
 
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
