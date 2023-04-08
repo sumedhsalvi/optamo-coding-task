@@ -1,6 +1,6 @@
 export interface MovieAvgRatingData {
   name: string;
-  YOR: string;
-  genres: string;
-  avgRating: number;
+  year: string;
+  genre: string[];
+  average_rating: number;
 }
