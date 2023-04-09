@@ -33,6 +33,7 @@ import { DataDisplayPanelComponent } from './app-components/data-display-panel/d
 import { SliderComponent } from './app-components/slider/slider.component';
 import { LoginComponent } from './app-components/login/login.component';
 import { NavToolbarComponent } from './app-components/nav-toolbar/nav-toolbar.component';
+import { MatSortModule } from '@angular/material/sort';
 
 @NgModule({
   declarations: [
@@ -70,6 +71,7 @@ import { NavToolbarComponent } from './app-components/nav-toolbar/nav-toolbar.co
     MatSliderModule,
     NgxSliderModule,
     MatDividerModule,
+    MatSortModule,
     NgxsModule.forRoot([FilterSelectionState, MovieState])
   ],
   providers: [],
