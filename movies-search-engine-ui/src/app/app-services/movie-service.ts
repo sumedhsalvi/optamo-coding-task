@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { FilterSelection } from '../model/filter-selection';
+import { FilterSelection } from '../app-model/filter-selection';
 
 /** Service to interact with the movies API and retrieve movie ratings based on filter selections */
 @Injectable({

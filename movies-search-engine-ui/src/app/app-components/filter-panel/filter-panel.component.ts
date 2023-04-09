@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngxs/store';
-import { SetFilterSelection } from '../app-state/filter-selection-state/filter-selection-state';
-import { FilterSelection } from '../model/filter-selection';
-import { GenreListItem } from '../model/genre-list';
-import { StarRatingColor } from '../model/star-rating-color';
+import { FilterSelection } from 'src/app/app-model/filter-selection';
+import { GenreListItem } from 'src/app/app-model/genre-list';
+import { StarRatingColor } from 'src/app/app-model/star-rating-color';
+import { SetFilterSelection } from 'src/app/app-state/filter-selection-state/filter-selection-state';
 
 /**
  * Component for managing filters in a movie app.

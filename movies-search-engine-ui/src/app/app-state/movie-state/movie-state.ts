@@ -1,9 +1,9 @@
 import { Injectable } from '@angular/core';
 import { State, Action, StateContext, Selector } from '@ngxs/store';
 import { tap } from 'rxjs/operators';
-import { FilterSelection } from 'src/app/model/filter-selection';
-import { MovieAvgRatingData } from 'src/app/model/movie-avg-rating-data';
-import { MoviesService } from 'src/app/services/movie-service';
+import { FilterSelection } from 'src/app/app-model/filter-selection';
+import { MovieAvgRatingData } from 'src/app/app-model/movie-avg-rating-data';
+import { MoviesService } from 'src/app/app-services/movie-service';
 
 /** Class defines the action for loading movies filtered by a given selection */
 export class LoadMovieFilter {

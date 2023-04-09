@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Action, Selector, State, StateContext } from '@ngxs/store';
-import { FilterSelection } from 'src/app/model/filter-selection';
 import { LoadMovieFilter } from '../movie-state/movie-state';
+import { FilterSelection } from 'src/app/app-model/filter-selection';
 
 /** Interface represents the data model for the filter selection state */
 export interface FilterSelectionStateModel {

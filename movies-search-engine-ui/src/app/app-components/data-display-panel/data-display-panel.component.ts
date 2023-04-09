@@ -5,8 +5,8 @@ import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 import { Select } from '@ngxs/store';
 import { Observable } from 'rxjs';
-import { MovieState, MovieStateModel } from '../app-state/movie-state/movie-state';
-import { StarRatingColor } from '../model/star-rating-color';
+import { StarRatingColor } from 'src/app/app-model/star-rating-color';
+import { MovieState, MovieStateModel } from 'src/app/app-state/movie-state/movie-state';
 
 /** This component represents a data display panel that shows a table of movies with average ratings */
 @Component({

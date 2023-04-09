@@ -1,7 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { AuthTokenModel } from '../model/auth-token-model';
-import { Router } from '@angular/router';
+import { AuthTokenModel } from '../app-model/auth-token-model';
 
 /** A service for managing user authentication and authorization */
 @Injectable({

@@ -1,8 +1,8 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
-import { AuthTokenModel } from '../model/auth-token-model';
-import { LoginService } from '../services/login-service';
+import { AuthTokenModel } from 'src/app/app-model/auth-token-model';
+import { LoginService } from 'src/app/app-services/login-service';
 
 /** LoginComponent is a component responsible for rendering a login form and submitting the credentials to authenticate the user */
 @Component({
@@ -52,7 +52,6 @@ export class LoginComponent implements OnInit {
       }, (error) => {
         this.loginService.setToken('');
         console.log('Auth Error');
-        this.router.navigate(['login']);
         this.error = 'Invalid username or password';
       })
     }

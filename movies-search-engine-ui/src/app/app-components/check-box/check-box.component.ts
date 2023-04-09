@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { GenreListItem } from '../model/genre-list';
+import { GenreListItem } from 'src/app/app-model/genre-list';
 
 /**
  * The component emits an `itemChange` event whenever the user checks or unchecks a checkbox. The
