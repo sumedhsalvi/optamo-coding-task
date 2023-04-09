@@ -36,7 +36,7 @@ export class FilterPanelComponent implements OnInit {
   genreList: GenreListItem[] = [];
 
   /** Range of years for filtering movies */
-  yearRange: [number, number] = [1900, 2020];
+  yearRange: [number, number] = [2000, 2020];
 
   /**
    * Creates a new FilterPanelComponent.

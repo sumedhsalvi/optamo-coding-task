@@ -17,14 +17,14 @@ export class SliderComponent implements OnInit {
   }
 
   /** The selected low value of the slider (i.e., the starting year of the selected range). */
-  value: number = 1990;
+  value: number = 2001;
 
   /** The selected high value of the slider (i.e., the ending year of the selected range). */
-  highValue: number = 2020;
+  highValue: number = 2018;
 
   /** The options for the ngx-slider component, defining the range of years available for selection. */
   options: Options = {
-    floor: 1900,
+    floor: 2000,
     ceil: 2020
   };
 

@@ -97,6 +97,15 @@ def get_movies():
             if movie['average_rating'] >= float(min_rating) and start_year <= movie['year'] <= end_year:
                 filtered_movies.append({'name': name, **movie})
         # If only one condition is provided, simply add the movie to the list
+        elif genres:
+            if genres in movie['genre']:
+                filtered_movies.append({'name': name, **movie})
+        elif min_rating:
+            if movie['average_rating'] >= float(min_rating):
+                filtered_movies.append({'name': name, **movie})
+        elif year_range:
+            if start_year <= movie['year'] <= end_year:
+                filtered_movies.append({'name': name, **movie})
         else:
             filtered_movies.append({'name': name, **movie})
 

@@ -48,7 +48,7 @@ export class StarRatingComponent implements OnInit {
    */
   onClick(rating:number) {
     console.log(rating)
-    this.snackBar.open('You rated ' + rating + ' / ' + this.starCount, '', {
+    this.snackBar.open('You selected ' + rating + ' & Up ', '', {
       duration: this.snackBarDuration
     });
     this.ratingUpdated.emit(rating);
