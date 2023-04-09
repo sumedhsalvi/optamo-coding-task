@@ -1,13 +1,11 @@
-import { AfterViewInit, Component, OnChanges, OnInit, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ViewChild } from '@angular/core';
 
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
-import { MovieAvgRatingData } from '../model/movie-avg-rating-data';
-import { MoviesService } from '../services/movie-service';
-import { Select, Store } from '@ngxs/store';
-import { MovieState, MovieStateModel } from '../app-state/movie-state/movie-state';
+import { Select } from '@ngxs/store';
 import { Observable } from 'rxjs';
+import { MovieState, MovieStateModel } from '../app-state/movie-state/movie-state';
 
 const sampleMovieData = [{
   name: 'RRR',
@@ -37,7 +35,7 @@ export class DataDisplayPanelComponent implements AfterViewInit  {
     this.dataSource.sort = this.sort;
     this.movieAvgRatingData$.subscribe((movieStateModel: MovieStateModel) => {
       // console.log('ngOnInit' + JSON.stringify(movieStateModel.movies));
-      this.dataSource = new MatTableDataSource(movieStateModel.movies);
+      this.dataSource.data = movieStateModel.movies;
     });
   }
 

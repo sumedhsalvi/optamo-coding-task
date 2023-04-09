@@ -20,7 +20,9 @@ export class MoviesService {
       .forEach(genre => {
         params = params.append('genres', genre.label);
       });
-    params = params.append('averageRating', filterSelection.averageRating.toString());
+      if(filterSelection.averageRating !== 0){
+        params = params.append('averageRating', filterSelection.averageRating.toString());
+      }
     params = params.append('yearRange', filterSelection.yearRange.join(','));
     return this.http.get(this.baseUrl, { params: params});
   }

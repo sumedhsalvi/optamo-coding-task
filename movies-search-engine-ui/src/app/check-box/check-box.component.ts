@@ -8,8 +8,6 @@ import { GenreListItem } from '../model/genre-list';
 })
 export class CheckBoxComponent implements OnInit {
 
-  // constructor(private _formBuilder: FormBuilder) { }
-
   ngOnInit(): void {
   }
 

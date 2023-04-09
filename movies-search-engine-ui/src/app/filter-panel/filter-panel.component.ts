@@ -1,10 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { StarRatingColor } from '../star-rating/star-rating.component';
-import { GenreListItem } from '../model/genre-list';
+import { Store } from '@ngxs/store';
+import { SetFilterSelection } from '../app-state/filter-selection-state/filter-selection-state';
 import { FilterSelection } from '../model/filter-selection';
-import { FilterSelectionState, FilterSelectionStateModel, SetFilterSelection } from '../app-state/filter-selection-state/filter-selection-state';
-import { Select, Store } from '@ngxs/store';
-import { Observable } from 'rxjs';
+import { GenreListItem } from '../model/genre-list';
+import { StarRatingColor } from '../star-rating/star-rating.component';
 
 @Component({
   selector: 'app-filter-panel',
@@ -14,10 +13,10 @@ import { Observable } from 'rxjs';
 export class FilterPanelComponent implements OnInit {
 
   ngOnInit(): void {
-
+    this.onFilterChange();
   }
 
-  averageRating:number = 3;
+  averageRating:number = 0;
   starCount:number = 5;
   starColor:StarRatingColor = StarRatingColor.accent;
   starColorP:StarRatingColor = StarRatingColor.primary;

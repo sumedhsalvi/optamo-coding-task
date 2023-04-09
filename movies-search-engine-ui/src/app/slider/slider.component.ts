@@ -14,7 +14,7 @@ export class SliderComponent implements OnInit {
   }
 
   value: number = 1990;
-  highValue: number = 2000;
+  highValue: number = 2020;
   options: Options = {
     floor: 1900,
     ceil: 2020
