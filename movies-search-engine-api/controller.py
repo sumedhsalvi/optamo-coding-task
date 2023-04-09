@@ -12,7 +12,7 @@ cors = CORS(app)
 with open('./data/movie_average_rating.json', 'r') as f:
     movies = json.load(f)
 
-# Load user data
+# Load user data from user.json file
 with open('./data/user.json', 'r') as f:
     user_data = json.load(f)
 
@@ -44,10 +44,12 @@ def login():
     username = auth.username
     password = auth.password
 
-    if username in user_data and hashlib.sha256(password.encode()).hexdigest() == user_data[username]:
+    if username in user_data and hashlib.sha256(password.encode()).hexdigest() == user_data[username]['password_hash']:
         # Generate a JWT if the authentication is successful
         payload = {
             'sub': username,
+            'first_name': user_data[username]['first_name'],
+            'last_name': user_data[username]['last_name'],
             'iat': datetime.utcnow(),
             'exp': datetime.utcnow() + JWT_EXPIRATION_TIME
         }

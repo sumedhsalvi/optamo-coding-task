@@ -16,9 +16,14 @@ mat-card-content {
   background-color: red;
 }
 
-.button {
+.login-button {
   display: flex;
   justify-content: flex-end;
+}
+
+button {
+  color: white;
+  background-color: black;
 }
 
 .loginbg {
