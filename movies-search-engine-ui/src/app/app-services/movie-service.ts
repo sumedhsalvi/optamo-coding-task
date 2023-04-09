@@ -24,7 +24,6 @@ export class MoviesService {
    * @returns An Observable that emits the movie ratings data.
    */
   getMovieRatings(filterSelection: FilterSelection): Observable<any> {
-    console.log( 'MOVIE SERIVES'+ JSON.stringify(filterSelection));
     /** Construct the HTTP request parameters based on the provided filter selections */
     let params = new HttpParams()
     filterSelection.genres

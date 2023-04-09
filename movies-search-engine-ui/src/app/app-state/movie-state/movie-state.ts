@@ -55,7 +55,6 @@ export class MovieState {
   loadMovies(ctx: StateContext<MovieStateModel>, { filterSelection }: LoadMovieFilter) {
     return this.moviesService.getMovieRatings(filterSelection).pipe(
       tap((movies: MovieAvgRatingData[]) => {
-        console.log('loadMoview' + JSON.stringify(movies[0]));
         ctx.dispatch(new SetMovies(movies));
       })
     );

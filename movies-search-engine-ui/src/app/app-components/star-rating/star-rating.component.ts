@@ -35,7 +35,6 @@ export class StarRatingComponent implements OnInit {
 
   /** Initializes the component and creates an array of rating values to display as stars. */
   ngOnInit(): void {
-    console.log("a "+this.starCount)
     for (let index = 0; index < this.starCount; index++) {
       this.ratingArr.push(index);
     }
@@ -47,7 +46,6 @@ export class StarRatingComponent implements OnInit {
    * @returns {boolean} - Always returns false to prevent default browser behavior.
    */
   onClick(rating:number) {
-    console.log(rating)
     this.snackBar.open('You selected ' + rating + ' & Up ', '', {
       duration: this.snackBarDuration
     });

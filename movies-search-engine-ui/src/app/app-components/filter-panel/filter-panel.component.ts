@@ -54,7 +54,6 @@ export class FilterPanelComponent implements OnInit {
    * @param averageRating The new average rating value.
    */
   onRatingChanged(averageRating: number){
-    console.log(averageRating);
     this.averageRating = averageRating;
     this.onFilterChange();
   }
@@ -64,7 +63,6 @@ export class FilterPanelComponent implements OnInit {
    * @param item The new list of genre items.
    */
   onItemListChange(item: GenreListItem[]) {
-    console.log(item);
     this.genreList=item;
     this.onFilterChange();
   }
@@ -74,7 +72,6 @@ export class FilterPanelComponent implements OnInit {
    * @param yearRange The new range of years.
    */
   onYearChange(yearRange: [number, number]) {
-    console.log(yearRange);
     this.yearRange = yearRange;
     this.onFilterChange();
   }

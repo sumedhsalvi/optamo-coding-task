@@ -31,7 +31,6 @@ export class StarButtonComponent implements OnInit {
    * Initializes the ratingArr array with numbers from 0 to starCount-1.
    */
   ngOnInit(): void {
-    console.log("a "+this.starCount)
     for (let index = 0; index < this.starCount; index++) {
       this.ratingArr.push(index);
     }

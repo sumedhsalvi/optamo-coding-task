@@ -43,7 +43,6 @@ export class LoginService {
   isLoggedIn(): boolean {
     const token = localStorage.getItem('authToken');
     const result =  token !== null && token !== '';
-    console.log('result' + token);
     return result;
   }
 }

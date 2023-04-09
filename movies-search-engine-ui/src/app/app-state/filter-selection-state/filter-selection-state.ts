@@ -41,7 +41,6 @@ export class FilterSelectionState {
   ) {
     patchState({ filterSelection });
     dispatch(new LoadMovieFilter(filterSelection));
-    console.log('state update'+  filterSelection);
   }
 
   /**

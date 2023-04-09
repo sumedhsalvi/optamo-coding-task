@@ -45,13 +45,11 @@ export class LoginComponent implements OnInit {
       const result = this.loginService.login(this.form.get('username')?.value, this.form.get('password')?.value);
 
       result.subscribe((data: AuthTokenModel) => {
-        console.log('auth sucess: '+ data.token);
         this.loginService.setToken(data.token);
         this.router.navigate(['dashboard']);
 
       }, (error) => {
         this.loginService.setToken('');
-        console.log('Auth Error');
         this.error = 'Invalid username or password';
       })
     }
