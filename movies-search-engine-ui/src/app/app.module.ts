@@ -18,6 +18,19 @@ import { MatInputModule } from '@angular/material/input';
 import {MatCardModule} from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { HttpClientModule } from '@angular/common/http';
+import { FilterPanelComponent } from './filter-panel/filter-panel.component';
+import {MatCheckboxModule} from '@angular/material/checkbox';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+import {MatTooltipModule} from '@angular/material/tooltip';
+import { StarRatingComponent } from './star-rating/star-rating.component';
+import { CheckBoxComponent } from './check-box/check-box.component';
+import {MatListModule} from '@angular/material/list';
+import { SliderComponent } from './slider/slider.component';
+import {MatSliderModule} from '@angular/material/slider';
+import { NgxSliderModule } from '@angular-slider/ngx-slider';
+import { NgxsModule } from '@ngxs/store';
+import { FilterSelectionState } from './app-state/filter-selection-state/filter-selection-state';
+import { MovieState } from './app-state/movie-state/movie-state';
 
 @NgModule({
   declarations: [
@@ -25,7 +38,11 @@ import { HttpClientModule } from '@angular/common/http';
     DashboardComponent,
     LoginComponent,
     NavToolbarComponent,
-    DataDisplayPanelComponent
+    DataDisplayPanelComponent,
+    FilterPanelComponent,
+    StarRatingComponent,
+    CheckBoxComponent,
+    SliderComponent
   ],
   imports: [
     BrowserModule,
@@ -42,7 +59,14 @@ import { HttpClientModule } from '@angular/common/http';
     MatCardModule,
     MatButtonModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    MatCheckboxModule,
+    MatSnackBarModule,
+    MatTooltipModule,
+    MatListModule,
+    MatSliderModule,
+    NgxSliderModule,
+    NgxsModule.forRoot([FilterSelectionState, MovieState])
   ],
   providers: [],
   bootstrap: [AppComponent]

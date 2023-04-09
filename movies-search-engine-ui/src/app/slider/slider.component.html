@@ -1,0 +1,2 @@
+<h2>Year of Release</h2>
+<ngx-slider [(highValue)]="highValue" [options]="options" (userChangeEnd)="valueChanges.emit([$event.value, $event.highValue!])"></ngx-slider>
