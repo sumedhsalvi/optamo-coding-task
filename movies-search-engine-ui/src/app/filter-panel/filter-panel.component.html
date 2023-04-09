@@ -1,5 +1,5 @@
 <div class="filter-container">
   <app-check-box (itemChange)="onItemListChange($event)"></app-check-box>
-  <app-star-rating [rating]="averageRating"  [starCount]="starCount" [color]="starColor" (ratingUpdated)="onRatingChanged($event)"></app-star-rating>
-  <app-slider (valueChanges)="onYearChange($event)"></app-slider>
+  <app-star-rating class="filter-star-rating" [rating]="averageRating"  [starCount]="starCount" [color]="starColor" (ratingUpdated)="onRatingChanged($event)"></app-star-rating>
+  <app-slider class="filter-slider" (valueChanges)="onYearChange($event)"></app-slider>
 </div>

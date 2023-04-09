@@ -6,6 +6,7 @@ import { MatTableDataSource } from '@angular/material/table';
 import { Select } from '@ngxs/store';
 import { Observable } from 'rxjs';
 import { MovieState, MovieStateModel } from '../app-state/movie-state/movie-state';
+import { StarRatingColor } from '../model/star-rating-color';
 
 const sampleMovieData = [{
   name: 'RRR',
@@ -22,6 +23,11 @@ const sampleMovieData = [{
 export class DataDisplayPanelComponent implements AfterViewInit  {
   displayedColumns: string[] = ['name', 'year', 'genre', 'average_rating'];
   dataSource: MatTableDataSource<any>;
+
+  starCount:number = 5;
+  starColor:StarRatingColor = StarRatingColor.accent;
+  starColorP:StarRatingColor = StarRatingColor.primary;
+  starColorW:StarRatingColor = StarRatingColor.warn;
 
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild(MatSort) sort: MatSort;
@@ -40,6 +46,5 @@ export class DataDisplayPanelComponent implements AfterViewInit  {
   }
 
   constructor() { }
-
 }
 

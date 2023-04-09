@@ -1,19 +1,21 @@
 import { Injectable } from '@angular/core';
-import { State, Action, Selector, StateContext } from '@ngxs/store';
+import { Action, Selector, State, StateContext } from '@ngxs/store';
 import { FilterSelection } from 'src/app/model/filter-selection';
-import { LoadMovieFilter, MovieState } from '../movie-state/movie-state';
+import { LoadMovieFilter } from '../movie-state/movie-state';
 
-
+/** Interface represents the data model for the filter selection state */
 export interface FilterSelectionStateModel {
   filterSelection: FilterSelection;
 }
 
+/** Class defines the action for setting the filter selection */
 export class SetFilterSelection {
   static readonly type = '[FilterSelection] Set';
 
   constructor(public filterSelection: FilterSelection) {}
 }
 
+/** State for the filter selection feature */
 @State<FilterSelectionStateModel>({
   name: 'filterSelection',
   defaults: {
@@ -26,6 +28,12 @@ export class SetFilterSelection {
 })
 @Injectable()
 export class FilterSelectionState {
+  /**
+   * Action is triggered when a new filter selection is set.
+   * @param patchState - The method to update the current state.
+   * @param dispatch - The method to dispatch an action to the store.
+   * @param filterSelection - The new filter selection to set.
+   */
   @Action(SetFilterSelection)
   setFilterSelection(
     { patchState , dispatch }: StateContext<FilterSelectionStateModel>,

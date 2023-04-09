@@ -31,6 +31,7 @@ import { NgxSliderModule } from '@angular-slider/ngx-slider';
 import { NgxsModule } from '@ngxs/store';
 import { FilterSelectionState } from './app-state/filter-selection-state/filter-selection-state';
 import { MovieState } from './app-state/movie-state/movie-state';
+import { StarButtonComponent } from './star-button/star-button.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import { MovieState } from './app-state/movie-state/movie-state';
     FilterPanelComponent,
     StarRatingComponent,
     CheckBoxComponent,
-    SliderComponent
+    SliderComponent,
+    StarButtonComponent
   ],
   imports: [
     BrowserModule,

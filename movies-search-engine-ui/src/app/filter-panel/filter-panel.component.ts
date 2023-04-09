@@ -3,7 +3,7 @@ import { Store } from '@ngxs/store';
 import { SetFilterSelection } from '../app-state/filter-selection-state/filter-selection-state';
 import { FilterSelection } from '../model/filter-selection';
 import { GenreListItem } from '../model/genre-list';
-import { StarRatingColor } from '../star-rating/star-rating.component';
+import { StarRatingColor } from '../model/star-rating-color';
 
 @Component({
   selector: 'app-filter-panel',

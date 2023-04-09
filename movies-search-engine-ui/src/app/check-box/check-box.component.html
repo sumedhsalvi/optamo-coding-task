@@ -1,6 +1,6 @@
-<h2>Genre</h2>
-<h3>Select your genres:</h3>
-<mat-list>
+<h2 class="header">Genre</h2>
+<h3 class="sub-header">Select your genres:</h3>
+<mat-list class="check-box-list">
   <mat-list-item *ngFor="let item of items">
     <mat-checkbox [(ngModel)]="item.checked" (change)="onItemChange()">
       {{ item.label }}
