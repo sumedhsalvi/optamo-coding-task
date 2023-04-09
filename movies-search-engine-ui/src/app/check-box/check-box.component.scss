@@ -8,4 +8,16 @@
 
 .check-box-list {
   padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.625rem;
+}
+
+.check-box-list>* {
+  flex: 1 1 10rem;
+}
+
+.wrapper {
+  width: 25rem;
+  padding-bottom: 1rem;
 }

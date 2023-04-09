@@ -10,11 +10,12 @@
 .left-panel {
   flex-grow: 1;
   margin-left: 1rem;
-  margin-right: 2rem;
+  max-width: 25rem;
 }
 
 .center-panel {
-  flex-grow: 4;
+  flex-grow: 1;
+  width: 75rem;
 }
 
 .right-panel {

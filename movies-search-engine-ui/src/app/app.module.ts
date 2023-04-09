@@ -32,6 +32,7 @@ import { NgxsModule } from '@ngxs/store';
 import { FilterSelectionState } from './app-state/filter-selection-state/filter-selection-state';
 import { MovieState } from './app-state/movie-state/movie-state';
 import { StarButtonComponent } from './star-button/star-button.component';
+import {MatDividerModule} from '@angular/material/divider';
 
 @NgModule({
   declarations: [
@@ -68,6 +69,7 @@ import { StarButtonComponent } from './star-button/star-button.component';
     MatListModule,
     MatSliderModule,
     NgxSliderModule,
+    MatDividerModule,
     NgxsModule.forRoot([FilterSelectionState, MovieState])
   ],
   providers: [],
