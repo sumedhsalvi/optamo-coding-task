@@ -8,39 +8,47 @@ import { Observable } from 'rxjs';
 import { MovieState, MovieStateModel } from '../app-state/movie-state/movie-state';
 import { StarRatingColor } from '../model/star-rating-color';
 
-const sampleMovieData = [{
-  name: 'RRR',
-  YOR: '2023',
-  genres: 'Action',
-  avgRating: 5
-}]
-
+/** This component represents a data display panel that shows a table of movies with average ratings */
 @Component({
   selector: 'app-data-display-panel',
   templateUrl: './data-display-panel.component.html',
   styleUrls: ['./data-display-panel.component.scss']
 })
 export class DataDisplayPanelComponent implements AfterViewInit  {
+  /** The list of columns to display in the table */
   displayedColumns: string[] = ['name', 'year', 'genre', 'average_rating'];
+
+  /** The data source for the table */
   dataSource: MatTableDataSource<any>;
 
+  /** The number of stars to display for each movie's rating */
   starCount:number = 5;
+
+  /** The accent color for the ratings */
   starColor:StarRatingColor = StarRatingColor.accent;
+
+  /** The primary color for the ratings */
   starColorP:StarRatingColor = StarRatingColor.primary;
+
+  /** The warn color for the ratings */
   starColorW:StarRatingColor = StarRatingColor.warn;
 
+  /** The paginator for the table */
   @ViewChild(MatPaginator) paginator: MatPaginator;
+
+  /** The sort for the table */
   @ViewChild(MatSort) sort: MatSort;
 
+  /** The observable that provides the movie data with their average ratings */
   @Select(MovieState)
   movieAvgRatingData$: Observable<MovieStateModel>;
 
+  /** Called after the component's view has been initialized */
   ngAfterViewInit() {
     this.dataSource = new MatTableDataSource();
     this.dataSource.paginator = this.paginator;
     this.dataSource.sort = this.sort;
     this.movieAvgRatingData$.subscribe((movieStateModel: MovieStateModel) => {
-      // console.log('ngOnInit' + JSON.stringify(movieStateModel.movies));
       this.dataSource.data = movieStateModel.movies;
     });
   }

@@ -44,6 +44,11 @@ export class FilterSelectionState {
     console.log('state update'+  filterSelection);
   }
 
+  /**
+   * Selector returns the current filter selection state.
+   * @param state - The current state of the filter selection feature.
+   * @returns The current filter selection state.
+   */
   @Selector()
   static getFilterSelection(state: FilterSelectionStateModel) {
     return state.filterSelection;

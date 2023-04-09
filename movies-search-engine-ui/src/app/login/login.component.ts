@@ -1,9 +1,10 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
-import { LoginService } from '../services/login-service';
 import { Router } from '@angular/router';
 import { AuthTokenModel } from '../model/auth-token-model';
+import { LoginService } from '../services/login-service';
 
+/** LoginComponent is a component responsible for rendering a login form and submitting the credentials to authenticate the user */
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -11,19 +12,36 @@ import { AuthTokenModel } from '../model/auth-token-model';
 })
 export class LoginComponent implements OnInit {
 
+  /**
+   * Creates an instance of LoginComponent.
+   * @param {LoginService} loginService - The LoginService used to authenticate the user.
+   * @param {Router} router - The Router used to navigate to different pages.
+   */
   constructor(readonly loginService: LoginService, private router: Router) { }
 
-  ngOnInit(): void {
-  }
-
+  /** The FormGroup containing two FormControls for the username and password inputs */
   form: FormGroup = new FormGroup({
     username: new FormControl(''),
     password: new FormControl(''),
   });
 
+  /** An event emitter that fires when the login form is submitted */
+  @Output() submitEM = new EventEmitter();
+
+  /** An error message to be displayed on the screen if the authentication fails */
+  @Input() error: string | null;
+
+  /** Initializes the component */
+  ngOnInit(): void {
+  }
+
+  /**
+   * Submits the login form and authenticates the user.
+   * If the authentication succeeds, the user is redirected to the dashboard.
+   * If the authentication fails, an error message is displayed on the screen.
+   */
   submit() {
     if (this.form.valid) {
-      // this.submitEM.emit(this.form.value);
       const result = this.loginService.login(this.form.get('username')?.value, this.form.get('password')?.value);
 
       result.subscribe((data: AuthTokenModel) => {
@@ -35,12 +53,9 @@ export class LoginComponent implements OnInit {
         this.loginService.setToken('');
         console.log('Auth Error');
         this.router.navigate(['login']);
-        // TODO SHOW ERROR MESSAGE ON SCREEN
+        this.error = 'Invalid username or password';
       })
     }
   }
-  @Input() error: string | null;
-
-  @Output() submitEM = new EventEmitter();
-
 }
+
