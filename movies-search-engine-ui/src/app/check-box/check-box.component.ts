@@ -20,6 +20,22 @@ export class CheckBoxComponent implements OnInit {
   /** The array of genre items to be displayed as checkboxes */
   @Input() items: GenreListItem[] = [
     {
+      label: 'Action',
+      checked: false
+    },
+    {
+      label: 'Adventure',
+      checked: false
+    },
+    {
+      label: 'Animation',
+      checked: false
+    },
+    {
+      label: 'Children',
+      checked: false
+    },
+    {
       label: 'Comedy',
       checked: false
     },
@@ -28,11 +44,55 @@ export class CheckBoxComponent implements OnInit {
       checked: false
     },
     {
+      label: 'Documentary',
+      checked: false
+    },
+    {
       label: 'Drama',
       checked: false
     },
     {
+      label: 'Fantasy',
+      checked: false
+    },
+    {
       label: 'Film-Noir',
+      checked: false
+    },
+    {
+      label: 'Horror',
+      checked: false
+    },
+    {
+      label: 'IMAX',
+      checked: false
+    },
+    {
+      label: 'Musical',
+      checked: false
+    },
+    {
+      label: 'Mystery',
+      checked: false
+    },
+    {
+      label: 'Romance',
+      checked: false
+    },
+    {
+      label: 'Sci-Fi',
+      checked: false
+    },
+    {
+      label: 'Thriller',
+      checked: false
+    },
+    {
+      label: 'War',
+      checked: false
+    },
+    {
+      label: 'Western',
       checked: false
     }
   ];
